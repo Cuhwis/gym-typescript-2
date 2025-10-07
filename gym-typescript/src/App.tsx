@@ -1,20 +1,33 @@
 import Navbar from "@/scenes/navbar";
-import { useState } from "react";
-
-enum SelectedPage {
-  Home = "home",
-  Benefits = "benefits",
-  OurClassese = "ourclasses",
-  ContactUs = "contactus",
-}
+import { useEffect, useState } from "react";
+import { SelectedPage } from "@/shared/types";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<string>(SelectedPage.Home);
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home,
+  );
+  const [isTopOFPage, setIsTopOfPage] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage(SelectedPage.Home);
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       <div className="app bg-gray-20">
-        <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <Navbar
+          isTopOfPage={isTopOFPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
       </div>
     </>
   );
