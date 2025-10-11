@@ -4,7 +4,7 @@ import ActionButton from "@/shared/ActionButton";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import HomePageText from "@/assets/HomePageText.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
-import Sponsorforbes from "@/assets/Sponsorforbes.png";
+import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -51,6 +51,18 @@ const Home = ({ setSelectedPage }: Props) => {
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </div>
+      {/* SPONSORS */}
+      {isAboveMediumScreens && (
+        <div>
+          <div>
+            <div>
+              <img alt="redbull-sponsor" src={SponsorRedBull} />
+              <img alt="forbes-sponsor" src={SponsorForbes} />
+              <img alt="fortune-sponsor" src={SponsorFortune} />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
