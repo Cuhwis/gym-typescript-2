@@ -14,7 +14,6 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px");
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
-      Home
       {/* IMAGE AND MAIN HEADER */}
       <div className="">
         {/* MAIN HEADER */}
@@ -26,6 +25,11 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>
+            <p>
+              Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
+              Studios to get the Body Shapes That you Dream of.. Get Your Dream
+              Body Now.
+            </p>
           </div>
         </div>
         {/* IMAGE */}
