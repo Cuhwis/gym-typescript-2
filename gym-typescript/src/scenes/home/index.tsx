@@ -1,4 +1,4 @@
-import type { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
@@ -6,6 +6,7 @@ import HomePageText from "@/assets/HomePageText.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import Sponsorforbes from "@/assets/Sponsorforbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -30,6 +31,19 @@ const Home = ({ setSelectedPage }: Props) => {
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
+          </div>
+          {/* ACTIONS */}
+          <div>
+            <ActionButton setSelectedPage={setSelectedPage}>
+              Join Now
+            </ActionButton>
+            <AnchorLink
+              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+              href={`#${SelectedPage.ContactUs}`}
+            >
+              <p>Learn More</p>
+            </AnchorLink>
           </div>
         </div>
         {/* IMAGE */}
