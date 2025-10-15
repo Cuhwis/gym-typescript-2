@@ -26,14 +26,14 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img src={HomePageText} alt="home-page-text" />
               </div>
             </div>
-            <p>
+            <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
           </div>
           {/* ACTIONS */}
-          <div>
+          <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
@@ -47,7 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         {/* IMAGE */}
-        <div>
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </div>
