@@ -1,5 +1,6 @@
-import type { SelectedPage } from "@/shared/types";
-import React, { type ReactElement } from "react";
+import { SelectedPage } from "@/shared/types";
+import { type ReactElement } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   icon: ReactElement;
