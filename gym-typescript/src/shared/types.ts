@@ -8,7 +8,7 @@ export enum SelectedPage {
 }
 
 export interface BenefitType {
-  icon: ReactElement;
+  icon: JSX.Element;
   title: string;
   description: string;
 }
