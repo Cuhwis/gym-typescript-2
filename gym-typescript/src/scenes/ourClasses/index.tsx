@@ -6,6 +6,7 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
+import HText from "@/shared/HText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -27,7 +28,17 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-        ></motion.div>
+        >
+          <div className="">
+            <HText>OUR CLASSES</HText>
+            <p className="py-5">
+              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
+              tellus quam porttitor. Mauris velit euismod elementum arcu neque
+              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
+              enim mattis odio in risus nunc.
+            </p>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
